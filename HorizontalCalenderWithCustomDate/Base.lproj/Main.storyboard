@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HorizontalCalenderWithCustomDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofp-TL-bJk">
+                                <rect key="frame" x="0.0" y="70" width="375" height="150"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-IA-scs">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="NCD-4I-nuY"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IgT-5x-cdE">
+                                            <size key="itemSize" width="100" height="89"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="timeTableCollectionCell" id="IbU-ts-a6y" customClass="TimeTableCollectionCell" customModule="HorizontalCalenderWithCustomDate" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="10.5" width="100" height="89"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="89"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Beg-fY-Tdy">
+                                                            <rect key="frame" x="0.0" y="59" width="100" height="30"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-Uq-IOS">
+                                                                    <rect key="frame" x="5" y="5" width="90" height="2"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="2" id="Dl7-NW-5cb"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="SEPTEMBER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlB-hF-7kM" customClass="EZLabel" customModule="HorizontalCalenderWithCustomDate" customModuleProvider="target">
+                                                                    <rect key="frame" x="10" y="11" width="85" height="16"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="16" id="nEg-Na-KQ5"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="wdO-Uq-IOS" firstAttribute="leading" secondItem="Beg-fY-Tdy" secondAttribute="leading" constant="5" id="hPS-1M-yc1"/>
+                                                                <constraint firstItem="wdO-Uq-IOS" firstAttribute="top" secondItem="Beg-fY-Tdy" secondAttribute="top" constant="5" id="ngY-Ow-4I5"/>
+                                                                <constraint firstItem="KlB-hF-7kM" firstAttribute="leading" secondItem="Beg-fY-Tdy" secondAttribute="leading" constant="10" id="oOU-nd-0MQ"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="uNe-uc-nYD"/>
+                                                                <constraint firstAttribute="height" constant="30" id="vrl-7k-e4H"/>
+                                                                <constraint firstAttribute="trailing" secondItem="wdO-Uq-IOS" secondAttribute="trailing" constant="5" id="x21-qY-KHF"/>
+                                                                <constraint firstAttribute="bottom" secondItem="KlB-hF-7kM" secondAttribute="bottom" constant="3" id="yee-wr-YY5"/>
+                                                                <constraint firstAttribute="trailing" secondItem="KlB-hF-7kM" secondAttribute="trailing" constant="5" id="zoi-kY-o2o"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="30" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgZ-rd-UFu" customClass="EZLabel" customModule="HorizontalCalenderWithCustomDate" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="30" width="100" height="29"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="31"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBN-zJ-GBC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Wednessday" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-Pa-oWW" customClass="EZLabel" customModule="HorizontalCalenderWithCustomDate" customModuleProvider="target">
+                                                                    <rect key="frame" x="20" y="5" width="75" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="j2z-GK-G0i"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white" translatesAutoresizingMaskIntoConstraints="NO" id="92t-gy-gtx">
+                                                                    <rect key="frame" x="5" y="10" width="10" height="10"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="10" id="IaO-e5-db2"/>
+                                                                        <constraint firstAttribute="width" constant="10" id="OIu-Rc-DNA"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="hy6-Pa-oWW" firstAttribute="top" secondItem="rBN-zJ-GBC" secondAttribute="top" constant="5" id="D6V-uC-sah"/>
+                                                                <constraint firstAttribute="height" constant="30" id="F0w-26-KTV"/>
+                                                                <constraint firstAttribute="trailing" secondItem="hy6-Pa-oWW" secondAttribute="trailing" constant="5" id="T38-A7-Wll"/>
+                                                                <constraint firstItem="92t-gy-gtx" firstAttribute="top" secondItem="rBN-zJ-GBC" secondAttribute="top" constant="10" id="WwB-fv-0Ww"/>
+                                                                <constraint firstItem="hy6-Pa-oWW" firstAttribute="leading" secondItem="92t-gy-gtx" secondAttribute="trailing" constant="5" id="XJC-tJ-BmF"/>
+                                                                <constraint firstItem="92t-gy-gtx" firstAttribute="leading" secondItem="rBN-zJ-GBC" secondAttribute="leading" constant="5" id="oLv-TP-Dpc"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" red="1" green="0.25098039220000001" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Beg-fY-Tdy" firstAttribute="leading" secondItem="IbU-ts-a6y" secondAttribute="leading" id="7Yz-RT-DGg"/>
+                                                    <constraint firstItem="rBN-zJ-GBC" firstAttribute="leading" secondItem="IbU-ts-a6y" secondAttribute="leading" id="Tca-cf-Op5"/>
+                                                    <constraint firstItem="Beg-fY-Tdy" firstAttribute="top" secondItem="tgZ-rd-UFu" secondAttribute="bottom" id="ZXV-Lx-fcT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Beg-fY-Tdy" secondAttribute="trailing" id="bdH-Vg-VNH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tgZ-rd-UFu" secondAttribute="trailing" id="f5H-dC-Zka"/>
+                                                    <constraint firstItem="rBN-zJ-GBC" firstAttribute="top" secondItem="IbU-ts-a6y" secondAttribute="top" id="m7K-ih-h00"/>
+                                                    <constraint firstItem="tgZ-rd-UFu" firstAttribute="leading" secondItem="IbU-ts-a6y" secondAttribute="leading" id="oOA-Bh-kje"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rBN-zJ-GBC" secondAttribute="trailing" id="pVl-jS-V7g"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Beg-fY-Tdy" secondAttribute="bottom" id="vQE-me-9mc"/>
+                                                    <constraint firstItem="tgZ-rd-UFu" firstAttribute="top" secondItem="rBN-zJ-GBC" secondAttribute="bottom" id="zPc-Uh-tYV"/>
+                                                </constraints>
+                                                <size key="customSize" width="100" height="89"/>
+                                                <connections>
+                                                    <outlet property="dateLabel" destination="tgZ-rd-UFu" id="s6m-SY-Y6U"/>
+                                                    <outlet property="dayLabel" destination="hy6-Pa-oWW" id="ran-76-WyU"/>
+                                                    <outlet property="monthLabel" destination="KlB-hF-7kM" id="raj-cb-qFg"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="RrN-bH-oxs"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="f64-ml-Ohs"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="488-Bo-3z4"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Zc-IA-scs" secondAttribute="trailing" id="6Pu-mE-geq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Gff-6h-u6j"/>
+                                    <constraint firstItem="3Zc-IA-scs" firstAttribute="top" secondItem="Ofp-TL-bJk" secondAttribute="top" id="Yu1-LZ-xek"/>
+                                    <constraint firstItem="3Zc-IA-scs" firstAttribute="leading" secondItem="Ofp-TL-bJk" secondAttribute="leading" id="v7L-0h-o4T"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ofp-TL-bJk" secondAttribute="trailing" id="Lg6-fQ-EoJ"/>
+                            <constraint firstItem="Ofp-TL-bJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="XID-uN-9cX"/>
+                            <constraint firstItem="Ofp-TL-bJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gMa-cy-kMr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateCollectionView" destination="3Zc-IA-scs" id="KhI-3B-5hK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back_white" width="16" height="16"/>
+    </resources>
+</document>
